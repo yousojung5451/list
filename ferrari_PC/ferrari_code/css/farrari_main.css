@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* ================= 접근성 ================= */
+.skip_nav {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #ff2a2a;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.skip_nav:focus {
+    top: 10px;
+}
+
+/* ================= HEADER ================= */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+   background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.82),
+        rgba(0,0,0,0.42),
+        rgba(0, 0, 0, 0.096)
+    );
+    backdrop-filter: blur(2px);
+}
+
+.header_inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 56px;
+}
+
+/* 햄버거 */
+.menu_btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 38px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* 로고 중앙 */
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* 오른쪽 */
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  
+}
+
+.header_inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 28px;
+}
+
+.header_right a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-decoration: none;
+}
+
+.header_right a:hover {
+  opacity: 1;
+}
+
+/* 언어 */
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang_btn {
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.78;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700 bold ;
+    letter-spacing: 0.6px;
+}
+
+.lang_btn.active {
+    opacity: 1;
+    
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* 텍스트 */
+.hero_text {
+    position: absolute;
+    top: 170px;
+    left: 58px;
+    width: 620px;
+}
+
+/* 작은 제목 */
+.hero_sub {
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    opacity: 0.92;
+    font-weight: 700;
+}
+
+/* 메인 타이틀 */
+
+.hero_title {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.hero_title {
+    font-size: 111px;
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -1px;
+}
+
+.hero_title span {
+    display: block;
+
+}
+
+.hero_title span:last-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* POWER 강조 */
+.hero_highlight {
+    font-style: normal;
+    color: #ff2a2a;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 8px rgba(255,0,0,0.8),
+        0 0 16px rgba(255,0,0,0.6),
+        0 0 28px rgba(255,0,0,0.4);
+}
+/* 설명 */
+.hero_desc {
+    margin-top: 24px;
+    font-size: 19px;
+    font-weight: 500;
+    opacity: 0.94;
+    letter-spacing: 0.2px;
+    line-height: 1.45;
+}
+
+/* ================= 버튼 (핵심🔥) ================= */
+.hero_btn {
+    display: inline-block;
+    margin-top: 34px;
+    padding: 17px 34px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.8px;
+    text-align: center;
+
+    background: linear-gradient(to bottom, #ff2a2a, #390909);
+
+    border: 1px solid rgba(255, 106, 106, 0.534);
+    border-radius: 4px;
+
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.6),
+        0 0 20px rgba(255, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 80, 80, 0.4);
+
+    text-shadow: 0 0 6px rgba(255,255,255,0.6);
+
+    transition: all 0.3s ease;
+    
+ /*
+    background: linear-gradient(to bottom, #ff3b30, #7a0d0d);
+    border: 1px solid rgba(255, 120, 120, 0.95);
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.12),
+        0 8px 24px rgba(0,0,0,0.38),
+        0 0 14px rgba(255, 40, 40, 0.30),
+        inset 0 1px 0 rgba(255,255,255,0.18);
+    text-shadow: none;
+    position: relative;
+    overflow: hidden;
+    */
+}
+
+/* hover */
+.hero_btn:hover {
+    
+    background: linear-gradient(to bottom, #ff4d4d, #b30000);
+
+    box-shadow:
+        0 0 14px rgba(255, 0, 0, 0.9),
+        0 0 30px rgba(255, 0, 0, 0.7),
+        inset 0 0 14px rgba(255, 100, 100, 0.6);
+
+    transform: translateY(-2px);
+    
+
+    /*
+    background: linear-gradient(to bottom, #ff554d, #a61212);
+    box-shadow:
+        0 0 0 1px rgba(255,255,255,0.18),
+        0 10px 28px rgba(0,0,0,0.42),
+        0 0 18px rgba(255, 50, 50, 0.45),
+        inset 0 1px 0 rgba(255,255,255,0.22);
+    transform: translateY(-2px);
+    */
+}
+
+.hero_visual::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: radial-gradient(circle, rgba(255,0,0,0.25), transparent 70%);
+    filter: blur(60px);
+}
+
+/* ================= TOP 버튼 ================= */
+.top_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,0,0,0.85);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+.top_btn:hover {
+    background: #ff0000;
+}
+
+/* ================= 등장 애니메이션 ================= */
+.hero_sub,
+.hero_title,
+.hero_desc,
+.hero_btn{
+    opacity: 0;
+    transform: translateY(45px);
+    animation: heroUp 0.9s ease forwards;
+}
+
+.hero_sub{
+    animation-delay: 0.15s;
+}
+
+.hero_title{
+    animation-delay: 0.35s;
+}
+
+.hero_desc{
+    animation-delay: 0.6s;
+}
+
+.hero_btn{
+    animation-delay: 0.82s;
+
+    background: linear-gradient(to bottom, #ff3b30, #5a0000);
+    border: 1px solid rgba(255, 120, 120, 0.9);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.5),
+        0 0 12px rgba(255,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+
+.hero_visual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_visual .bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 차 이미지 */
+/* 앞차 */
+.car_front {
+    width: 95%;
+    right: 2%;
+    bottom: -8%;
+    z-index: 3;
+    animation-delay: 0.7s;
+}
+
+
+/* 뒷차 */
+.car_back {
+    width: 50%;
+    left: 8%;
+    bottom: 17%;
+    z-index: 2;
+    animation-delay: 0.35s;
+}
+
+.car_wrap {
+    position: absolute;
+    opacity: 0;
+    animation: carUp 1s ease forwards;
+}
+
+.car_front::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(255,80,80,0.15), transparent 70%);
+    pointer-events: none;
+}
+
+/* 그림자 줄이기  */
+.car_shadow {
+    filter: blur(20px); /* 28 → 20 */
+}
+
+/*
+.car_front::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 60% 40%, rgba(255,80,80,0.3), transparent 60%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+    */
+
+/* 애니메이션 */
+@keyframes carUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes heroUp{
+    from{
+        opacity: 0;
+        transform: translateY(45px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ================= 반응형 ================= */
+@media (max-width: 1024px) {
+
+    .hero_text {
+        left: 60px;
+        width: 400px;
+    }
+
+    .hero_title {
+        font-size: 58px;
+    }
+    
+
+}
+
+@media (max-width: 768px) {
+    #header {
+        height: 60px;
+    }
+
+    .header_inner {
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 24px;
+    }
+
+    .hero {
+        height: 90vh;
+    }
+
+    .hero_text {
+        top: 100px;
+        left: 20px;
+        width: 280px;
+    }
+
+    .hero_title {
+        font-size: 40px;
+    }
+
+    .hero_desc {
+        font-size: 13px;
+    }
+
+    .hero_btn {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+}
+
